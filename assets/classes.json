@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "subject": "S05 - Interface Homem-máquina",
+    "date": "ter",
+    "time": "10:00",
+    "location": "P1-S17",
+    "exam_alert": false,
+    "exam": "12/05",
+    "attendance": "10/25",
+    "grade": "9"
+  },
+  {
+    "id": 2,
+    "subject": "E01 - Circuitos Elétricos em Corrente Contínua",
+    "date": "ter",
+    "time": "10:00",
+    "location": "P1-S17",
+    "exam_alert": true,
+    "exam": "12/05",
+    "attendance": "10/25",
+    "grade": "5"
+  },
+  {
+    "id": 3,
+    "subject": "M02 - Álgebra e Geometria Analítica",
+    "date": "ter",
+    "time": "10:00",
+    "location": "P1-S17",
+    "exam_alert": true,
+    "exam": "12/05",
+    "attendance": "10/25",
+    "grade": "7"
+  }
+]

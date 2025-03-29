@@ -1,0 +1,477 @@
+:root {
+  --color-light-blue: #53d2f5;
+  --color-light-green: #53f5ac;
+  --color-light-orange: #f58653;
+
+  --color-gray-400: #756863;
+  --color-gray-500: #637175;
+  --color-gray-600: #63756d;
+
+  --color-zinc-50: oklch(0.985 0 0);
+  --color-zinc-100: oklch(0.967 0.001 286.375);
+  --color-zinc-200: oklch(0.92 0.004 286.32);
+  --color-zinc-300: oklch(0.871 0.006 286.286);
+  --color-zinc-400: oklch(0.705 0.015 286.067);
+  --color-zinc-500: oklch(0.552 0.016 285.938);
+  --color-zinc-600: oklch(0.442 0.017 285.786);
+  --color-zinc-700: oklch(0.37 0.013 285.805);
+  --color-zinc-800: oklch(0.274 0.006 286.033);
+  --color-zinc-900: oklch(0.21 0.006 285.885);
+  --color-zinc-950: oklch(0.141 0.005 285.823);
+
+  --color-text-primary: var(--color-zinc-100);
+  --color-text-secondary: var(--color-zinc-600);
+
+  --color-accent: var(--color-light-orange);
+  --color-content: var(--color-zinc-800);
+
+  --color-background: var(--color-zinc-950);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* all: unset; */
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+
+  background-color: var(--color-background);
+}
+
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: var(--color-footer);
+  color: var(--color-zinc-100);
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+  -webkit-box-shadow: 16px 6px 40px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 16px 6px 40px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 16px 6px 40px -15px rgba(0, 0, 0, 0.75);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  color: var(--color-zinc-100);
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.svg_logo_inatel {
+  fill: var(--color-zinc-100);
+  color: var(--color-zinc-100);
+
+  width: 12rem;
+}
+
+.sidebar .svg_logo_inatel {
+  width: 6rem;
+}
+
+.theme-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.theme-title {
+  color: var(--color-zinc-100);
+  font-size: 1.5rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.toggle-theme-button {
+  all: unset;
+
+  cursor: pointer;
+
+  padding: 0.5rem 1rem;
+
+  color: var(--color-zinc-100);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  height: 24px;
+}
+
+.toggle-theme-button:hover {
+  filter: brightness(0.8);
+  background-color: var(--color-text-secondary);
+
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem 2rem;
+  background-color: var(--color-footer);
+}
+
+.icon-button {
+  all: unset;
+
+  cursor: pointer;
+  transition: filter 0.2s;
+
+  color: var(--color-zinc-100);
+}
+
+.icon-button svg {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  padding: 2rem 1rem;
+
+  width: 100vw;
+  max-width: 1280px;
+  flex-grow: 1;
+
+  margin: 0 auto;
+  flex: 1;
+}
+
+.main-container h2 {
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+}
+
+.hello-user {
+  color: var(--color-text-primary);
+  font-size: 2.5rem;
+}
+
+.pendings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pending-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--color-content);
+}
+
+.pending-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pending-title {
+  color: var(--color-text-primary);
+  font-size: 1.75rem;
+}
+
+.pending-text {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+.pending-card svg {
+  width: 3rem !important;
+  height: 3rem !important;
+
+  color: var(--color-accent);
+}
+
+.disciplines {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.discipline-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--color-content);
+}
+
+.discipline-card svg {
+  width: 3rem !important;
+  height: 3rem !important;
+
+  color: var(--color-accent);
+}
+
+.discipline-card .discipline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.discipline-card .discipline-title {
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+}
+
+.discipline-card .discipline-text {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+}
+
+.discipline-card-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.discipline-buttons {
+  display: flex;
+  gap: 1rem;
+
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.discipline-buttons svg {
+  width: 1rem !important;
+  height: 1rem !important;
+
+  color: var(--color-text-secondary);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0;
+  background-color: var(--color-footer);
+
+  height: 10rem;
+}
+
+.footer-container .svg_logo_inatel {
+  width: 8rem;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+}
+
+/* Fornecido pelo professor */
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.info > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  gap: 1rem;
+}
+
+.card p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  orphans: 3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.card-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-details p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  orphans: 3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.card-details svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-primary);
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-content);
+  border-radius: 6px;
+  /* margin: 20px; */
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) */
+}
+
+.carousel {
+  display: flex; /* faça essa alteração */
+  transition: transform 0.5s ease-in-out; /* inclua a animação */
+}
+
+.card {
+  min-width: 100%;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.info {
+  padding: 10px;
+}
+
+.info > p {
+  font-size: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.icon {
+  font-size: 1rem;
+  margin-left: 5px;
+  margin-right: 2px;
+  width: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 10px;
+
+  border-radius: 6px;
+}
+
+#prevBtn {
+  left: 10px;
+}
+#nextBtn {
+  right: 10px;
+}
