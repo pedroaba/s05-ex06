@@ -54,7 +54,7 @@ class ClassesComponent extends HTMLElement {
 
   async loadClasses() {
     try {
-      const response = await fetch("/assets/classes.json")
+      const response = await fetch("assets/classes.json")
       const classes = await response.json()
 
       this.render(classes)
